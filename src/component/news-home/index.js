@@ -102,7 +102,7 @@ class NewsHome extends Component {
               <div className="sub-load-more">
                 {/* {this.showButton()} */}
                 <Button type="primary" onClick={this.loadMore}>
-                  Load More...
+                  Xem Thêm...
                 </Button>
               </div>
             </div>
