@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from "react";
 import { Link } from "react-router-dom";
-import {apiUrl} from "../../../helpers/config";
+import {API} from "../../../helpers/config";
 
 // const apiUrl = apiUrl;
 
@@ -14,7 +14,7 @@ class RecentPost extends Component {
             <Link to={`/${slug}`}>
               <img
                 alt="recent"
-                src={`${apiUrl}/api/open?name=${images}`}
+                src={`${API}/open?name=${images}`}
               />
             </Link>
           </div>

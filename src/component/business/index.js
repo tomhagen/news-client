@@ -3,7 +3,7 @@ import React, { Component, Fragment } from "react";
 import moment from "moment";
 import { Link } from "react-router-dom";
 import {connect} from 'react-redux';
-import {apiUrl} from "../../helpers/config";
+import {API} from "../../helpers/config";
 
 // const apiUrl = apiUrl;
 
@@ -21,7 +21,7 @@ class Business extends Component {
               backgroundRepeat: "no-repeat",
               position: "relative",
               backgroundPosition: "center",
-              backgroundImage: `url(${apiUrl}/api/open?name=${news.images}`
+              backgroundImage: `url(${API}/open?name=${news.images}`
             }}
           >
             <div className="container">

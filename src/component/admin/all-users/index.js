@@ -12,7 +12,7 @@ import {
 } from "../../../actions/usersAction";
 import { withRouter } from "react-router-dom";
 import Swal from "sweetalert2";
-import {apiUrl} from "../../../helpers/config";
+import {API} from "../../../helpers/config";
 
 // const apiUrl = apiUrl;
 
@@ -37,7 +37,7 @@ class AllUsers extends Component {
       if (result.value) {
         Axios({
           method: "DELETE",
-          url: `${apiUrl}/api/users/${id}`
+          url: `${API}/users/${id}`
         })
           .then(res => {
             this.props.onDeleteUserItem(id);

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import {apiUrl} from "../../../helpers/config";
+import {API} from "../../../helpers/config";
 
 // const apiUrl = apiUrl;
 
@@ -14,7 +14,7 @@ class EditorChoiceItem extends Component {
           <Link to={`/detail/${_id}`}>
             <img
               alt="editor"
-              src={`${apiUrl}/api/open?name=${images}`}
+              src={`${API}/open?name=${images}`}
               className="item-img"
             />
           </Link>

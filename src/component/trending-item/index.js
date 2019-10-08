@@ -2,7 +2,7 @@ import "./index.scss";
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import moment from "moment";
-import {apiUrl} from "../../helpers/config";
+import {API} from "../../helpers/config";
 
 // const apiUrl = apiUrl;
 
@@ -15,7 +15,7 @@ class TrendingItem extends Component {
         <div className="trending-item-box-img">
           <Link to={`/${slug}`}>
             <img
-              src={`${apiUrl}/api/open?name=${images}`}
+              src={`${API}/open?name=${images}`}
               className="news-item-img"
             />
           </Link>

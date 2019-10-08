@@ -18,7 +18,7 @@ import { connect } from "react-redux";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import "react-quill/dist/quill.bubble.css";
-import {apiUrl} from "../../../helpers/config";
+import {API} from "../../../helpers/config";
 
 // const apiUrl = apiUrl;
 
@@ -189,7 +189,7 @@ class CreatePosts extends Component {
     if (!this.props.editStatus) {
       Axios({
         method: "POST",
-        url: `${apiUrl}/api/upload_images`,
+        url: `${API}/upload_images`,
         data: formData,
         config
       })
@@ -197,7 +197,7 @@ class CreatePosts extends Component {
           // message.success("Upload images successfully");
           Axios({
             method: "POST",
-            url: `${apiUrl}/api/posts`,
+            url: `${API}/posts`,
             crossdomain: true,
             data: { ...this.state, images: res.data.path }
           })
@@ -223,7 +223,7 @@ class CreatePosts extends Component {
       if (this.state.file !== null) { // Check if images have data or not 
         Axios({
           method: "POST",
-          url: `${apiUrl}/api/upload_images`,
+          url: `${API}/upload_images`,
           crossdomain: true,
           data: formData,
           config
@@ -236,7 +236,7 @@ class CreatePosts extends Component {
               hide,
               Axios({
                 method: "PUT",
-                url: `${apiUrl}/api/posts/${this.props.editNewsInfo._id}`,
+                url: `${API}/posts/${this.props.editNewsInfo._id}`,
                 crossdomain: true,
                 data: { ...this.state, images: res.data.path }
               })
@@ -256,7 +256,7 @@ class CreatePosts extends Component {
       } else {
         Axios({
           method: "PUT",
-          url: `${apiUrl}/api/posts/${this.props.editNewsInfo._id}`,
+          url: `${API}/posts/${this.props.editNewsInfo._id}`,
           crossdomain: true,
           data: this.state
         })
@@ -387,7 +387,7 @@ class CreatePosts extends Component {
                   cover={
                     <img
                       alt="example"
-                      src={`${apiUrl}/api/open?name=${this.state.images.replace(
+                      src={`${API}/open?name=${this.state.images.replace(
                         "C:\\fakepath\\",
                         ""
                       )}`}

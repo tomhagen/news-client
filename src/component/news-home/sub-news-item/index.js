@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import moment from "moment";
 import { Link } from "react-router-dom";
-import {apiUrl} from "../../../helpers/config";
+import {API} from "../../../helpers/config";
 
 // const apiUrl = apiUrl;
 
@@ -14,7 +14,7 @@ class SubNewsItem extends Component {
           <Link to={`/${slug}`}>
             <img
               alt="detail"
-              src={`${apiUrl}/api/open?name=${images}`}
+              src={`${API}/open?name=${images}`}
             />
           </Link>
         </div>

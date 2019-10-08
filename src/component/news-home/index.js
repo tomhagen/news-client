@@ -6,7 +6,7 @@ import moment from "moment";
 import { Link } from "react-router-dom";
 import { requestGetTrendingNews } from "../../actions/newsAction";
 import { Button } from "antd";
-import {apiUrl} from "../../helpers/config";
+import {API} from "../../helpers/config";
 
 // const apiUrl = apiUrl;
 
@@ -44,7 +44,7 @@ class NewsHome extends Component {
             position: "relative",
             marginRight: "3%",
             backgroundPosition: "center",
-            backgroundImage: `url(${apiUrl}/api/open?name=${news.images}`
+            backgroundImage: `url(${API}/open?name=${news.images}`
           }}
         >
           <div className="container">

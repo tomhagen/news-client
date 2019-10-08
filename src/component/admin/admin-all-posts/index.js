@@ -14,7 +14,7 @@ import {
 } from "../../../actions/newsAction";
 import { withRouter } from "react-router-dom";
 import Swal from "sweetalert2";
-import {apiUrl} from "../../../helpers/config";
+import {API} from "../../../helpers/config";
 
 // const apiUrl = apiUrl;
 
@@ -50,7 +50,7 @@ class AllPosts extends Component {
       if (result.value) {
         Axios({
           method: "DELETE",
-          url: `${apiUrl}/api/posts/${id}`
+          url: `${API}/posts/${id}`
         })
           .then(res => {
             this.props.onDeleteNewsItem(id);

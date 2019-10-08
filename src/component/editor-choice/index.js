@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import EditorChoiceItem from "./editor-choice-item";
 import Axios from "axios";
-import {apiUrl} from "../../helpers/config";
+import {API} from "../../helpers/config";
 
 // const apiUrl = apiUrl;
 
@@ -19,7 +19,7 @@ class EditorChoice extends Component {
   componentDidMount() {
     Axios({
       method: "GET",
-      url: `${apiUrl}/api/posts/category?type=energy&limit=10`,
+      url: `${API}/posts/category?type=energy&limit=10`,
       crossdomain: true
     })
       .then(res => {

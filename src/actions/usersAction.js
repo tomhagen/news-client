@@ -1,6 +1,6 @@
 import * as types from "../constants/userType";
 import Axios from "axios";
-import {apiUrl} from "../helpers/config";
+import {API} from "../helpers/config";
 
 // const apiUrl = apiUrl;
 
@@ -8,7 +8,7 @@ export const requestGetAllUsers = () => {
   return dispatch => {
     Axios({
       method: "GET",
-      url: `${apiUrl}/api/users`,
+      url: `${API}/users`,
       crossdomain: true
     })
       .then(res => {

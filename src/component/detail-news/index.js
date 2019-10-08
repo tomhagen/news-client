@@ -12,7 +12,7 @@ import {
   requestGetNewsByCategory
 } from "../../actions/newsAction";
 import YouMayLikeItem from "../you-may-like-item";
-import {apiUrl} from "../../helpers/config";
+import {API} from "../../helpers/config";
 
 // const apiUrl = apiUrl;
 
@@ -91,7 +91,7 @@ class DetailNews extends Component {
 
                 <img
                   alt="item"
-                  src={`${apiUrl}/api/open?name=${images}`}
+                  src={`${API}/open?name=${images}`}
                 />
               </div>
               <Social />

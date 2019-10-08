@@ -4,7 +4,7 @@ import * as types from "../constants/userType";
 import lodash from "lodash";
 import setHeader from "../helpers/setHeader";
 import { message } from "antd";
-import {apiUrl} from "../helpers/config";
+import {API} from "../helpers/config";
 
 // const apiUrl = apiUrl;
 
@@ -13,7 +13,7 @@ export const login = (data, history) => {
   return dispatch => {
     Axios({
       method: "POST",
-      url: `${apiUrl}/api/users/login`,
+      url: `${API}/users/login`,
       crossdomain: true,
       data: { email, password }
     })
@@ -40,7 +40,7 @@ export const register = (data, history) => {
   return dispatch => {
     Axios({
       method: "POST",
-      url: `${apiUrl}/api/users/register`,
+      url: `${API}/users/register`,
       crossdomain: true,
       data: data
     })

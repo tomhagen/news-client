@@ -4,7 +4,7 @@ import { Input, Button, message } from "antd";
 import React, { Component, Fragment } from "react";
 import Axios from "axios";
 import Swal from "sweetalert2";
-import {apiUrl} from "../../helpers/config";
+import {API} from "../../helpers/config";
 
 // const apiUrl = apiUrl;
 
@@ -26,7 +26,7 @@ class StayUpdated extends Component {
     setTimeout(hide, 2500);
     Axios({
       method: "POST",
-      url: `${apiUrl}/api/getemail`,
+      url: `${API}/getemail`,
       data: this.state
     })
       .then(res => {

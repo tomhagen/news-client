@@ -2,7 +2,7 @@ import "./index.scss";
 import React, { Component } from "react";
 import moment from "moment";
 import { Link } from "react-router-dom";
-import {apiUrl} from "../../helpers/config";
+import {API} from "../../helpers/config";
 
 // const apiUrl = apiUrl;
 
@@ -16,7 +16,7 @@ class ItemNews extends Component {
             <Link to={`/${slug}`}>
               <img
                 alt="item"
-                src={`${apiUrl}/api/open?name=${images}`}
+                src={`${API}/open?name=${images}`}
                 className="news-item-img"
               />
             </Link>

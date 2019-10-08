@@ -4,7 +4,7 @@ import { Breadcrumb } from "antd";
 import React, { Component, Fragment } from "react";
 import moment from "moment";
 import { Link } from "react-router-dom";
-import {apiUrl} from "../../helpers/config";
+import {API} from "../../helpers/config";
 
 // const apiUrl = apiUrl;
 
@@ -24,7 +24,7 @@ class PagesCaption extends Component {
             position: "relative",
             backgroundPosition: "center",
             backgroundColor: "rgba(0, 0, 0, 0.9)",
-            backgroundImage: `url(${apiUrl}/api/open?name=${images}`
+            backgroundImage: `url(${API}/open?name=${images}`
           }}
         >
           <div className="overlay" />

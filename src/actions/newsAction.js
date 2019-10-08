@@ -1,6 +1,6 @@
 import * as types from "../constants/newsType";
 import Axios from "axios";
-import {apiUrl} from "../helpers/config";
+import {API} from "../helpers/config";
 
 // const apiUrl = apiUrl;
 
@@ -8,7 +8,7 @@ export const requestGetAllNewsList = () => {
   return dispatch => {
     Axios({
       method: "GET",
-      url: `${apiUrl}/api/posts`,
+      url: `${API}/posts`,
       crossdomain: true
     })
       .then(res => {
@@ -24,7 +24,7 @@ export const requestGetTrendingNews = limit => {
   return dispatch => {
     Axios({
       method: "GET",
-      url: `${apiUrl}/api/posts/trending?limit=${limit}`,
+      url: `${API}/posts/trending?limit=${limit}`,
       crossdomain: true
     })
       .then(res => {
@@ -40,7 +40,7 @@ export const requestGetNewsByCategory = (type, limit) => {
   return dispatch => {
     Axios({
       method: "GET",
-      url: `${apiUrl}/api/posts/category?type=${type}&limit=${limit}`,
+      url: `${API}/posts/category?type=${type}&limit=${limit}`,
       crossdomain: true
     })
       .then(res => {
@@ -55,7 +55,7 @@ export const requestGetDetailOfNews = id => {
   return dispatch => {
     Axios({
       method: "GET",
-      url: `${apiUrl}/api/posts/id?id=${id}`,
+      url: `${API}/posts/id?id=${id}`,
       crossdomain: true
     })
       .then(res => {
@@ -71,7 +71,7 @@ export const requestAllNewsPagniation = (pageNumber, pageSize) => {
   return dispatch => {
     Axios({
       method: "GET",
-      url: `${apiUrl}/api/posts/pagniation?pageNumber=${pageNumber}&pageSize=${pageSize}`,
+      url: `${API}/posts/pagniation?pageNumber=${pageNumber}&pageSize=${pageSize}`,
       crossdomain: true
     })
       .then(res => {
